@@ -7,6 +7,29 @@ format:
 toc: true
 ---
 
+
+## 0 - Setup
+
+```{r setup}
+if (!require("pacman")) 
+  install.packages("pacman")
+
+# use this line for installing/loading
+
+devtools::install_github("tidyverse/dsbox")
+
+pacman::p_load(tidyverse, 
+               glue,
+               scales,
+               here,
+               openintro)
+
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+
+```
+
+
 ## 1 - A new day, a new plot, a new geom
 
 ```{r}
